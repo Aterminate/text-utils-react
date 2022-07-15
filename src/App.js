@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import { Alert } from './components/Alert';
 import './App.css';
-import { About } from './components/About';
 import { Navbar } from './components/Navbar';
 import {TextForm} from  './components/TextForm';
 import React from 'react';
@@ -42,34 +41,12 @@ function App() {
   }
   return (
       <>
-        <Router>
           <Navbar title="TextUtils" aboutText="About Us" mode={mode} toggleMode={toggleMode} />
           <Alert alert={alert}/>
           <div className="container">
-          <Routes>
-              <Route
-                  path="/"
-                  element={
-                    <React.Fragment>
-                      <TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} />
-                    </React.Fragment>
-                  }
-              />
-              <Route
-                path="/About"
-                element={<About />}
-              />
-          </Routes>
-          {/* <Routes>
-            <Route path="/about">
-              <About/>
-            </Route>
-            <Route path="/">
             <TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} />
-            </Route>
-          </Routes> */}
           </div>
-        </Router>
+
       </>
   );
 }
