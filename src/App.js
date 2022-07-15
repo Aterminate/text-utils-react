@@ -42,24 +42,25 @@ function App() {
   }
   return (
       <>
-        <Router>
+//         <Router>
           <Navbar title="TextUtils" aboutText="About Us" mode={mode} toggleMode={toggleMode} />
           <Alert alert={alert}/>
           <div className="container">
-          <Routes>
-              <Route
-                  path="/"
-                  element={
-                    <React.Fragment>
-                      <TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} />
-                    </React.Fragment>
-                  }
-              />
-              <Route
-                path="/About"
-                element={<About />}
-              />
-          </Routes>
+            <TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} />
+//           <Routes>
+//               <Route
+//                   path="/"
+//                   element={
+//                     <React.Fragment>
+//                       <TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} />
+//                     </React.Fragment>
+//                   }
+//               />
+//               <Route
+//                 path="/About"
+//                 element={<About />}
+//               />
+//           </Routes>
           {/* <Routes>
             <Route path="/about">
               <About/>
@@ -69,7 +70,7 @@ function App() {
             </Route>
           </Routes> */}
           </div>
-        </Router>
+//         </Router>
       </>
   );
 }
